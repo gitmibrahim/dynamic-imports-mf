@@ -1,3 +1,4 @@
 {
-  "REMOTE_APP_URL": "https://mf-poc-remote.netlify.app/remoteEntry.js"
+  "HOST_APP_URL": "https://host-app-1c2.pages.dev/remoteEntry.js",
+  "REMOTE_APP_URL": "https://remote-app-3jn.pages.dev/remoteEntry.js"
 }
