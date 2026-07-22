@@ -2,9 +2,9 @@
 // ── TEST 1: dynamic import — this is the CONFIRMED-working consumption
 // pattern per the ecosystem evidence gathered before building this PoC.
 import { defineAsyncComponent, ref } from 'vue';
-const RemoteButtonAsync = defineAsyncComponent(() =>
-  import('remoteApp/ExposedButton')
-);
+// const RemoteButtonAsync = defineAsyncComponent(() =>
+//   import('remoteApp/ExposedButton')
+// );
 
 // ── TEST 2: literal static import — this is the UNCONFIRMED claim from the
 // original doc. Uncomment the line below and remove TEST 1's dynamic wiring
@@ -14,7 +14,7 @@ const RemoteButtonAsync = defineAsyncComponent(() =>
 // this file is only reached via the deferred `import('./app')` in main.ts —
 // so it SHOULD be safe to try. That itself is part of what you're testing.
 //
-// import RemoteButtonStatic from 'remoteApp/ExposedButton';
+import RemoteButtonStatic from 'remoteApp/ExposedButton';
 
 // ── TEST 3: shared Pinia store singleton check.
 // If `pinia: { singleton: true }` is genuinely enforced across the
@@ -52,6 +52,14 @@ const loadError = ref<string | null>(null);
         See comment above <code>RemoteButtonStatic</code> import — try it
         and record whether it throws, renders blank, or works.
       </p>
+       <Suspense>
+        <template #default>
+          <RemoteButtonStatic />
+        </template>
+        <template #fallback>
+          <span>Loading remote…</span>
+        </template>
+      </Suspense>
     </section>
 
     <section style="margin-top: 1.5rem; padding: 1rem; border: 1px dashed #999">
