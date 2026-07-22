@@ -14,7 +14,7 @@ export default createModuleFederationConfig({
     remoteApp: {
       type: 'module',
       name: 'remoteApp',
-      entry: 'http://localhost:5001/remoteEntry.js', // placeholder, overridden at runtime
+      entry: 'https://remote-app-3jn.pages.dev/remoteEntry.js', // placeholder, overridden at runtime
     },
   },
   shared: {
