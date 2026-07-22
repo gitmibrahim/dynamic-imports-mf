@@ -1,0 +1,36 @@
+headersOrigin = "config"
+plugins = []
+redirects = []
+
+[functions]
+
+[functions."*"]
+
+[build]
+publish = "C:\\Users\\muhammed.ibrahim\\Downloads\\data-bccbb4ee-8c8c-42f0-8c5c-9b86c932b547-1784644474-703461f7-batch-0000\\remote\\dist"
+publishOrigin = "config"
+commandOrigin = "config"
+base = "C:\\Users\\muhammed.ibrahim\\Downloads\\data-bccbb4ee-8c8c-42f0-8c5c-9b86c932b547-1784644474-703461f7-batch-0000\\remote"
+command = "npm run build"
+
+[build.environment]
+
+[build.processing]
+
+[build.processing.css]
+
+[build.processing.html]
+
+[build.processing.images]
+
+[build.processing.js]
+
+[build.services]
+
+[[headers]]
+for = "/*"
+
+[headers.values]
+Access-Control-Allow-Origin = "*"
+Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+Access-Control-Allow-Headers = "*"

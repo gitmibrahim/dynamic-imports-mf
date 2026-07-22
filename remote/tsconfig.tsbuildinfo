@@ -1,0 +1,1 @@
+{"root":["./src/main.ts","./src/stores/counterstore.ts","./src/app.vue","./src/components/exposedbutton.vue","./module-federation.config.ts","./vite.config.ts"],"checkPending":true,"version":"5.9.3"}
